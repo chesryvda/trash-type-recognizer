@@ -1,0 +1,4 @@
+.caption {
+    font-size: var(--fs-caption);
+    color: rgba(0, 0, 0, 0.5);
+}

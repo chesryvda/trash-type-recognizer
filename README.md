@@ -1,1 +1,1 @@
-# trash-type-recognizer
+# Afval herkenner

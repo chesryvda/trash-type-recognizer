@@ -1,0 +1,20 @@
+* ,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    font-family: var(--plus-jakarta-sans), Arial, sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-regular);
+    scroll-behavior: smooth;
+    background-color: var(--color-floral-white);
+    overflow-x: hidden;
+    color: var(--color-black);
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
