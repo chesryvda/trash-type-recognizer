@@ -10,8 +10,17 @@
     margin: 16px;
     z-index: 2;
     color: var(--color-floral-white);    
-    font-family: var(--plus-jakarta-sans);
     font-size: var(--fs-caption);
+}
+
+.content-bg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../assets/svg/brown-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 
 .content-container {
@@ -23,16 +32,6 @@
     padding: 56px;
     position: relative;
     z-index: 1;
-}
-
-.content-bg {
-    background-image: url("../assets/svg/brown-bg.svg");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
 }
 
 .content-left {
@@ -49,7 +48,7 @@
     height: 100%; 
     object-fit: cover;
     border-radius: 16px;
-    display: block; 
+    display: inline-block; 
 }
 
 .content-intro, .content-top, .content-bottom, .content-output, .content-left {

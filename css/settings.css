@@ -11,16 +11,11 @@
 
     /* Font sizes */
     --fs-h1: 3.8125em;     /* 61px */
-    --fs-h2: 3.0625em;     /* 49px */
-    --fs-h3: 2.4375em;     /* 39px */
-    --fs-h4: 1.9375em;     /* 31px */
     --fs-regular: 1em;     /* 16px */
-    --fs-caption: 12px; /* 14px */
+    --fs-caption: .75em;    /* 12px */
 
     /* Font weights */
     --fw-extrabold: 800;
     --fw-bold: 700;
-    --fw-semibold: 600;
-    --fw-medium: 500;
     --fw-regular: 400;
 }
