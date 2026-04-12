@@ -118,8 +118,12 @@
 }
 
 .content-output-list li {
-    padding: 40px;
     border-radius: 16px;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content-output-gft {
