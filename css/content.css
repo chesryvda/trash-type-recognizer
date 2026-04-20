@@ -3,55 +3,6 @@
     height: 100vh;
 }
 
-.content-popup {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    margin: 32px;
-}
-
-.content-popup-container {
-    position: relative;
-}
-
-.content-popup-inner {
-    padding: 16px;
-    background-color: var(--color-floral-white);
-    max-width: 516px;
-    width: 100%;
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23000000' stroke-width='4' stroke-dasharray='10%2c10' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
-    border-radius: 16px;
-}
-
-.content-popup-outer {
-    position: absolute;
-    right: -16px;
-    top: -16px;
-    color: var(--color-floral-white);
-    background-color: var(--color-brown);
-    padding: 8px;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0;
-    border: none;
-    font-size: 16px;
-}
-
-.content a {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 16px;
-    z-index: 1;
-    color: var(--color-floral-white);    
-    font-size: var(--fs-caption);
-}
-
 .content-bg {
     position: absolute;
     top: 0;

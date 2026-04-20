@@ -1,0 +1,9 @@
+.content a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 16px;
+    z-index: 1;
+    color: var(--color-floral-white);    
+    font-size: var(--fs-caption);
+}
