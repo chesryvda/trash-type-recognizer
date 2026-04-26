@@ -3,7 +3,7 @@ export function updateOutput(predictions) {
 
     resetAll();
 
-    if (top.probability < 0.7) return;
+    if (top.probability < 0.95) return;
 
     // Make sure the classNames of the model & HTML matches 
     if (top.className === "GFT") activate(".content-output-gft", "%2322C55E", "var(--color-green)");
