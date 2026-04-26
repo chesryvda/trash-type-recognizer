@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <!-- Styling -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Teachable Machine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body>
     <section class="content">
@@ -24,6 +27,7 @@
                     </div>
                     <div class="content-bottom">
                         <p>Houd je afval voor de camera</p>
+                        <div id="label-container"></div>
                         <div class="content-output">
                             <ul class="content-output-list">
                                 <li class="content-output-gft">
@@ -50,10 +54,10 @@
                 <p class="caption">Geen zorgen de camerabeelden worden niet opgeslagen. De beelden worden uitsluitend tijdelijk gebruikt tijdens de scan om de herkenning uit te voeren.</p>
             </div>
             <div class="content-right">
-                <img 
+                <!-- <img 
                     src="assets/images/freepik__realistic-photo-taken-from-a-camera-perspective-of-a-man-holding-a-water-bottle.png" 
                     alt="Realistic photo taken from a camera perspective of a man holding a water bottle"
-                >
+                > -->
             </div>
         </div>
         <div class="content-bg"></div>
@@ -62,8 +66,7 @@
 
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/d7a8c22788.js" crossorigin="anonymous" defer></script>
-
-    <!-- JS Scripts -->
-    <script type="module" src="js/main.js"></script>
+    <!-- JS Script -->
+    <script type="module" src="js/Main.js"></script>
 </body>
 </html>

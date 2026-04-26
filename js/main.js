@@ -1,1 +1,2 @@
-import "../js/popup.js";
+import "./Popup.js";
+import "./TeachableMachine.js";
