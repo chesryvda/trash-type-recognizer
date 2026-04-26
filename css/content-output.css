@@ -31,7 +31,7 @@
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%239CA3AF' stroke-width='4' stroke-dasharray='10%2c10' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
 }
 
-.content-output-plastic {
+.content-output-pmd {
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%232F80ED' stroke-width='4' stroke-dasharray='10%2c10' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
 }
 
@@ -47,7 +47,7 @@
     color: var(--color-light-grey);
 }
 
-.content-output-plastic p {
+.content-output-pmd p {
     color: var(--color-blue);
 }
 
@@ -63,7 +63,7 @@
     color: var(--color-light-grey);
 }
 
-.content-output-plastic i {
+.content-output-pmd i {
     color: var(--color-blue);
 }
 

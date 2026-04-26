@@ -1,3 +1,5 @@
+import { updateOutput } from "./output.js";
+
 // ! Name of the folder containing the model files
 const URL = "./assets/model/";
 
@@ -39,6 +41,9 @@ async function predict() {
             prediction[i].className + ": " + prediction[i].probability.toFixed(2);
         labelContainer.childNodes[i].innerHTML = classPrediction;
     }
+
+    // Update the visual output
+    updateOutput(prediction);
 }
 
 // ! Wait for tmImage to be available, then auto-start
