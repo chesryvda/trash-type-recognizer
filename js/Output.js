@@ -1,15 +1,32 @@
+import { saveStats } from "./Storage.js";
+
 export function updateOutput(predictions) {
-    const top = predictions.reduce((a, b) => a.probability > b.probability ? a : b);
+    const highestPrediction = predictions.reduce((a, b) => a.probability > b.probability ? a : b);
 
     resetAll();
 
-    if (top.probability < 0.95) return;
+    if (highestPrediction.probability < 0.99) return;
 
-    // Make sure the classNames of the model & HTML matches 
-    if (top.className === "GFT") activate(".content-output-gft", "%2322C55E", "var(--color-green)");
-    if (top.className === "PMD") activate(".content-output-pmd", "%232F80ED", "var(--color-blue)");
-    if (top.className === "Papier") activate(".content-output-paper", "%239CA3AF", "var(--color-light-grey)");
-    if (top.className === "Restafval") activate(".content-output-rest", "%23000000", "var(--color-black)");
+    // Zorg dat class namen van de teachable machine & HTML overeenkomen
+    if (highestPrediction.className === "GFT") {
+        activate(".content-output-gft", "%2322C55E", "var(--color-green)");
+        saveStats("GFT");
+    }
+
+    if (highestPrediction.className === "Papier") {
+        activate(".content-output-paper", "%239CA3AF", "var(--color-light-grey)");
+        saveStats("Papier");
+    }
+
+    if (highestPrediction.className === "PMD") {
+        activate(".content-output-pmd", "%232F80ED", "var(--color-blue)");
+        saveStats("PMD");
+    }
+
+    if (highestPrediction.className === "Restafval") { 
+        activate(".content-output-rest", "%23000000", "var(--color-black)");
+        saveStats("Restafval");
+    }
 }
 
 function activate(selector, fillColor, borderColor) {

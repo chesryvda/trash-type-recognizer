@@ -1,11 +1,12 @@
-import { updateOutput } from "./output.js";
+import { updateOutput } from "./Output.js";
+import { displayStats } from "./Storage.js";
 
-// ! Name of the folder containing the model files
+// Naam van de folder waarin de teachable machine inzit
 const URL = "./assets/model/";
 
 let model, webcam, labelContainer, maxPredictions;
 
-// Load the image model and setup the webcam
+// Teachable machine opstart en webcam
 async function init() {
     const modelURL = URL + "model.json";
     const metadataURL = URL + "metadata.json";
@@ -19,7 +20,7 @@ async function init() {
     await webcam.play();
     window.requestAnimationFrame(loop);
 
-    // ✅ Target .content-right instead of #webcam-container
+    // Webcam
     document.querySelector(".content-right").appendChild(webcam.canvas);
 
     labelContainer = document.getElementById("label-container");
@@ -42,16 +43,10 @@ async function predict() {
         labelContainer.childNodes[i].innerHTML = classPrediction;
     }
 
-    // Update the visual output
+    // Update UI output
     updateOutput(prediction);
 }
 
-// ! Wait for tmImage to be available, then auto-start
-function waitForTmImage() {
-    if (typeof tmImage !== "undefined") {
-        init();
-    } else {
-        setTimeout(waitForTmImage, 100);
-    }
-}
-waitForTmImage();
+// Toon bij het laden van de pagina de localStorage
+displayStats();
+init();
