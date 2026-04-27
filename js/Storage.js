@@ -2,6 +2,8 @@
 // 1.2 Wegens het om de 60FPS scant, zou het kunnen dat het zelfde type weer wordt gescand en zich weer bij optelt in de localStorage
 // 1.3 Om dit te voorkomen werken we met een COOLDOWN, indien de volgende scan minder dan 3s geleden is en hetzelfde type is negeren we het
 // 1.4 We koppelen een object met de statistieken (tellers) aan een datum
+// 1.5 saveStats(): gegevens laden, wijzigen, opslaan
+// 1.6 displayStats(): gegevens laden, displayen
 
 const COOLDOWN = 3000;
 const lastScan = {
@@ -16,7 +18,7 @@ const lastScan = {
 export function saveStats(className) {
     // ! LOAD
     // Haal huidige tellers op vandaag 
-    const today = new Date().toLocaleDateString();
+    const today = new Date().toISOString().split("T")[0];
     const saved = localStorage.getItem(today);
 
     // Als er vandaag nog niets gescand is (localStorage is leeg)
@@ -43,5 +45,32 @@ export function saveStats(className) {
 }
 
 export function displayStats() {
+    // ! DISPLAY
+    const outputStats = document.querySelector("#label-stats-container");
+    if (!outputStats) return;
 
+    // ! LOAD
+    // Haal huidige tellers op vandaag 
+    const today = new Date().toISOString().split("T")[0];
+    const saved = localStorage.getItem(today);
+
+    // Als er vandaag nog niets gescand is (localStorage is leeg)
+    // Koppel we die datum aan een object met statistieken (tellers = 0)
+    // Indien er al gescand is, nemen we het object van die dag
+    let counts;
+    if (saved === null) {
+        counts = { GFT: 0, Papier: 0, PMD: 0, Restafval: 0 };
+    } else {
+        counts = JSON.parse(saved);
+    }
+
+    const types = ["GFT", "Papier", "PMD", "Restafval"];
+    let outputText = types
+        .filter(type => counts[type] > 0)
+        .map(type => `${counts[type]}× ${type}`)
+        .join(" · ");
+
+    outputStats.innerHTML = outputText 
+        ? `Vandaag gescand: ${outputText}` 
+        : "Nog niets gescand.";
 }
