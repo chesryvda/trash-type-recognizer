@@ -33,6 +33,14 @@ async function init() {
         labelContainer.appendChild(document.createElement("div"));
     }
 
+    // ! Developer tools
+    document.addEventListener("keydown", (e) => {
+        if (e.key !== "d" && e.key !== "D") return;
+        
+        const labelContainer = document.getElementById("label-container");
+        labelContainer.hidden = !labelContainer.hidden;
+    });
+
     // Opnieuw scannen, reset alles en herstart predictions
     document.querySelector("#result-restart-button")?.addEventListener("click", resetScan);
 }

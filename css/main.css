@@ -18,7 +18,8 @@
 @import url("content-author.css");
 @import url("content-output.css");
 @import url("content-stats.css");
-@import url("result-panel.css");
+@import url("panel-result.css");
+@import url("panel-predictions.css");
 /*---------------------------------------*/
 /* # OBJECTS (layout structures)         */
 /*---------------------------------------*/
