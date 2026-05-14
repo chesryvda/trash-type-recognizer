@@ -1,0 +1,9 @@
+.content-stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.content-stats-label {
+    font-weight: var(--fw-bold);
+}

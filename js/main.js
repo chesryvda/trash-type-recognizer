@@ -1,4 +1,5 @@
-import "./Popup.js";
+import "./State.js";
+import "./Storage.js";
 import "./TeachableMachine.js";
 import "./Output.js";
-import "./Storage.js";
+import "./Popup.js";

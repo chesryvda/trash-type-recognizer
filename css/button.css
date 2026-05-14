@@ -1,0 +1,16 @@
+.button {
+    padding: 12px 32px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: var(--color-brown);
+    color: var(--color-floral-white);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-regular);
+    font-family: var(--plus-jakarta-sans), Arial, sans-serif;
+    border: none;
+}

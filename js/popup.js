@@ -1,5 +1,5 @@
 // Variables
-const POPUP_TIMER = 2000; // om de x-aantal seconden verschijnt er een popup
+const POPUP_TIMER = 600000; // om de 10min
 let tips = [];
 let currentIndex = 0;
 

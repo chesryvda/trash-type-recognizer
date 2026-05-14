@@ -1,6 +1,7 @@
 .content {
     position: relative;
     height: 100vh;
+    transition: opacity 1s ease;
 }
 
 .content-bg {
@@ -41,13 +42,13 @@
     border-radius: 16px;
 }
 
-/* .content-right img {
+.content-right img {
     width: 100%;
     height: 100%; 
     object-fit: cover;
     border-radius: 16px;
     display: inline-block; 
-} */
+}
 
 .content-intro, .content-top, .content-bottom, .content-output, .content-left {
     display: flex;
@@ -60,8 +61,4 @@
 
 .content-top, .content-bottom {
     gap: 16px;
-}
-
-.content-bottom p {
-    font-weight: var(--fw-bold);
 }

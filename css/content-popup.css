@@ -4,11 +4,11 @@
     top: 0;
     right: 0;
     margin: 32px;
-    animation: slideInLeft 1s ease forwards;
+    animation: fadeInLeft 1s ease forwards;
 }
 
 .content-popup.hiding {
-    animation: slideOutRight 1s ease forwards;
+    animation: fadeOutRight 1s ease forwards;
 }
 
 .content-popup-container {

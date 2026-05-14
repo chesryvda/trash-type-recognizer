@@ -26,9 +26,11 @@
                         <p>Ontdek meteen om welk type afval het gaat en waar het thuishoort voor correcte sortering.</p>
                     </div>
                     <div class="content-bottom">
-                        <p>Houd je afval voor de camera</p>
                         <div id="label-container"></div>
-                        <div id="label-stats-container"></div>
+                        <div class="content-stats-container">
+                            <div id="label-stats-container" class="content-stats-label"></div>
+                            <p>Houd je afval voor de camera</p>
+                        </div>
                         <div class="content-output">
                             <ul class="content-output-list">
                                 <li class="content-output-gft">
@@ -55,15 +57,23 @@
                 <p class="caption">Geen zorgen de camerabeelden worden niet opgeslagen. De beelden worden uitsluitend tijdelijk gebruikt tijdens de scan om de herkenning uit te voeren.</p>
             </div>
             <div class="content-right">
-                <!-- <img 
-                    src="assets/images/freepik__realistic-photo-taken-from-a-camera-perspective-of-a-man-holding-a-water-bottle.png" 
-                    alt="Realistic photo taken from a camera perspective of a man holding a water bottle"
-                > -->
             </div>
         </div>
         <div class="content-bg"></div>
         <a href="https://www.linkedin.com/in/chesry-van-den-abeele-a521b326a/" target="_blank">Created by Chesry</a>
     </section>
+
+    <div class="result-panel-outer">
+        <div class="result-panel-inner">
+            <p>Sorteer je afval bij:</p>
+            <h2 class="result-panel-label">PMD</h2>
+            <p class="result-panel-message">Neem een herbruikbare drinkbus mee volgende keer.</p>
+            <button id="result-restart-button" class="button" aria-label="Opnieuw scannen">
+                Opnieuw scannen
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
 
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/d7a8c22788.js" crossorigin="anonymous" defer></script>

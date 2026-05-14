@@ -17,6 +17,8 @@
 @import url("content-popup.css");
 @import url("content-author.css");
 @import url("content-output.css");
+@import url("content-stats.css");
+@import url("result-panel.css");
 /*---------------------------------------*/
 /* # OBJECTS (layout structures)         */
 /*---------------------------------------*/
@@ -25,6 +27,7 @@
 /* # UTILITIES (reusable)                */
 /*---------------------------------------*/
 @import url("caption.css");
+@import url("button.css");
 /*---------------------------------------*/
 /* # TOOLS (mixins)                      */
 /*---------------------------------------*/

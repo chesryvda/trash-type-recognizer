@@ -1,23 +1,7 @@
-// 1.1 Wanneer de teachable machine iet scant, wordt dit gevoegd aan een localStorage
-// 1.2 Wegens het om de 60FPS scant, zou het kunnen dat het zelfde type weer wordt gescand en zich weer bij optelt in de localStorage
-// 1.3 Om dit te voorkomen werken we met een COOLDOWN, indien de volgende scan minder dan 3s geleden is en hetzelfde type is negeren we het
-// 1.4 We koppelen een object met de statistieken (tellers) aan een datum
-// 1.5 saveStats(): gegevens laden, wijzigen, opslaan
-// 1.6 displayStats(): gegevens laden, displayen
+// Beide function moeten eventuele huidige tellers opnemen en updaten of displayen
 
-const COOLDOWN = 3000;
-const lastScan = {
-    GFT: 0,
-    PMD: 0,
-    Papier: 0,
-    Restafval: 0
-};
-
-// saveStats krijgt class naam binnen van de teachable machine
-// Wordt bijna om 60FPS opgeroepen vandaag onder "UPDATE" de cooldown check
 export function saveStats(className) {
-    // ! LOAD
-    // Haal huidige tellers op vandaag 
+    // ! LOAD — haal tellers op van vandaag
     const today = new Date().toISOString().split("T")[0];
     const saved = localStorage.getItem(today);
 
@@ -31,12 +15,7 @@ export function saveStats(className) {
         counts = JSON.parse(saved);
     }
 
-    // ! UPDATE
-    // Controleer per type of de cooldown voorbij is
-    const now = Date.now(); // Huidge moment in tijd
-    // Als dit type (className) minder dan 3 seconden geleden nog gescand werd = negeren
-    if (now - lastScan[className] < COOLDOWN) return; 
-    lastScan[className] = now;
+    // ! UPDATE — verhoog teller voor dit type
     counts[className]++;
 
     // ! SAVE
@@ -44,13 +23,8 @@ export function saveStats(className) {
     displayStats();
 }
 
-export function displayStats() {
-    // ! DISPLAY
-    const outputStats = document.querySelector("#label-stats-container");
-    if (!outputStats) return;
-
-    // ! LOAD
-    // Haal huidige tellers op vandaag 
+export function displayStats(filterType = null) {
+    // ! LOAD — haal tellers op van vandaag
     const today = new Date().toISOString().split("T")[0];
     const saved = localStorage.getItem(today);
 
@@ -64,6 +38,8 @@ export function displayStats() {
         counts = JSON.parse(saved);
     }
 
+    // ! DISPLAY
+    const outputStats = document.querySelector("#label-stats-container");
     const types = ["GFT", "Papier", "PMD", "Restafval"];
     let outputText = types
         .filter(type => counts[type] > 0)

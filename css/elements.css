@@ -5,6 +5,13 @@ h1 {
     line-height: 1;
 }
 
+h2 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-extrabold);
+    margin: 0;
+    line-height: 1;
+}
+
 ul {
     list-style-type: none;
     margin: 0;

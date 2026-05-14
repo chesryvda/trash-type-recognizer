@@ -12,8 +12,9 @@
 
     /* Font sizes */
     --fs-h1: 3.8125em;     /* 61px */
+    --fs-h2: 3.0625em;     /* 49px */
     --fs-regular: 1em;     /* 16px */
-    --fs-caption: .75em;    /* 12px */
+    --fs-caption: .75em;   /* 12px */
 
     /* Font weights */
     --fw-extrabold: 800;
